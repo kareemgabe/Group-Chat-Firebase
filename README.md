@@ -20,10 +20,8 @@ Frontend: Next.js (React)
 
 Backend: Firebase (Firestore, Authentication, Cloud Functions)
 
-UI Fonts: Geist Sans and Geist Mono from Google Fonts
 
-Styling: Tailwind CSS or custom CSS classes (depending on project setup)
-
+Styling: Tailwind CSS 
 
 Prerequisites
 Node.js and npm installed
@@ -37,23 +35,8 @@ git clone https://github.com/kareemgabe/Group-Chat-Firebase/tree/main
 Install dependencies:
 
 npm install
-Create a .env file in the root directory and add your Firebase configuration:
 
-NEXT_PUBLIC_FIREBASE_API_KEY=your_api_key
-NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_auth_domain
-NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
-NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_storage_bucket
-NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
-NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id
-Set up Firebase:
 
-Go to the Firebase Console and enable Authentication (Phone Number provider).
-
-Set up Firestore and create a collection named messages.
-
-Enable Firebase Cloud Messaging for push notifications.
-
-Deploy Cloud Functions:
 
 cd cloud-functions
 npm install
@@ -97,3 +80,6 @@ NEXT_PUBLIC_FIREBASE_PROJECT_ID=group-chat-ea04d
 NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=group-chat-ea04d.firebasestorage.app
 NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=109635220288
 NEXT_PUBLIC_FIREBASE_APP_ID=1:109635220288:web:62408f383f6c2da0d100a5
+
+
+
