@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+Readme
+Group Chat Application
+This is a real-time group chat application built with Next.js and Firebase. It allows users to sign in with their phone numbers, send messages, and view messages from other users in real-time.
 
-```bash
+Features
+Phone Number Authentication using Firebase Authentication
+
+Real-time Messaging with Firestore
+
+Push Notifications via Firebase Cloud Messaging
+
+Serverless Cloud Functions for handling backend logic
+
+Modern and responsive UI with Next.js
+
+Tech Stack
+Frontend: Next.js (React)
+
+Backend: Firebase (Firestore, Authentication, Cloud Functions)
+
+UI Fonts: Geist Sans and Geist Mono from Google Fonts
+
+Styling: Tailwind CSS or custom CSS classes (depending on project setup)
+
+
+Prerequisites
+Node.js and npm installed
+
+Firebase project set up
+
+Installation
+Clone the repository:
+
+git clone https://github.com/your-repo/group-chat.git
+cd group-chat
+Install dependencies:
+
+npm install
+Create a .env file in the root directory and add your Firebase configuration:
+
+NEXT_PUBLIC_FIREBASE_API_KEY=your_api_key
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_auth_domain
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
+NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id
+Set up Firebase:
+
+Go to the Firebase Console and enable Authentication (Phone Number provider).
+
+Set up Firestore and create a collection named messages.
+
+Enable Firebase Cloud Messaging for push notifications.
+
+Deploy Cloud Functions:
+
+cd cloud-functions
+npm install
+firebase deploy --only functions
+Start the development server:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Open http://localhost:3000 in your browser.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Usage
+Sign in with your phone number.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Enter the OTP sent to your phone to authenticate.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Send and view messages in the group chat.
 
-## Learn More
+Cloud Functions
+sendPushNotification
+Sends push notifications to users when a new message is posted.
 
-To learn more about Next.js, take a look at the following resources:
+Input: token, title, body
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Output: Success or error response
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+storeNewMessage
+Stores new messages in Firestore.
 
-## Deploy on Vercel
+Input: userId, messageText
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Output: Success or error response
