@@ -33,8 +33,7 @@ Firebase project set up
 Installation
 Clone the repository:
 
-git clone https://github.com/your-repo/group-chat.git
-cd group-chat
+git clone https://github.com/kareemgabe/Group-Chat-Firebase/tree/main
 Install dependencies:
 
 npm install
@@ -85,3 +84,16 @@ Stores new messages in Firestore.
 Input: userId, messageText
 
 Output: Success or error response
+
+
+
+
+
+.env.local
+
+NEXT_PUBLIC_FIREBASE_API_KEY=AIzaSyDbJNvqp-VBEnqg68_TyviRSEGpCJw8fQs
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=group-chat-ea04d.firebaseapp.com
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=group-chat-ea04d
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=group-chat-ea04d.firebasestorage.app
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=109635220288
+NEXT_PUBLIC_FIREBASE_APP_ID=1:109635220288:web:62408f383f6c2da0d100a5
